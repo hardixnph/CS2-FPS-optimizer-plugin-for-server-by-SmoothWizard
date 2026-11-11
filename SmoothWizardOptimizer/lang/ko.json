@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] 삭제 반복이 끝났습니다.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] 엔티티 {0}개 삭제 중. 멈추려면 css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] 삭제 반복을 멈췄습니다.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 지울 엔티티가 없습니다."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 지울 엔티티가 없습니다.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

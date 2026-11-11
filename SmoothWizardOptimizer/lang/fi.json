@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Poistosilmukka päättyi.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Poistetaan {0} kohdetta. Pysäytä komennolla css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Poistosilmukka pysäytettiin.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Ei poistettavia kohteita."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Ei poistettavia kohteita.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

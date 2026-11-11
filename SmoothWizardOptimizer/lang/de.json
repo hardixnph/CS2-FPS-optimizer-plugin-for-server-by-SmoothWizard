@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Entfernungsschleife beendet.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Entferne {0} Objekte. Stopp mit css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Entfernungsschleife gestoppt.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Keine Objekte zum Entfernen gefunden."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Keine Objekte zum Entfernen gefunden.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] Du hast keinen Zugriff auf diesen Befehl."
 }

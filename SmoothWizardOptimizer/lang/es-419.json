@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Ya terminó el ciclo de borrado.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Borrando {0} objetos. Para parar: css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Se detuvo el ciclo de borrado.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] No encontré objetos para borrar."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] No encontré objetos para borrar.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

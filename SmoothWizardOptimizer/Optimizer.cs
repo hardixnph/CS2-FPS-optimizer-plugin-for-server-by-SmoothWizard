@@ -3,6 +3,7 @@ using CounterStrikeSharp.API.Core;
 using CounterStrikeSharp.API.Core.Translations;
 using CounterStrikeSharp.API.Modules.Events;
 using CounterStrikeSharp.API.Modules.Commands;
+using CounterStrikeSharp.API.Modules.Admin;
 using CounterStrikeSharp.API.Modules.Timers; 
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,15 @@ using System.Reflection;
 
 namespace SmoothWizardOptimizer
 {
-    public class SmoothWizardOptimizer : BasePlugin
+    public class SmoothWizardOptimizer : BasePlugin, IPluginConfig<OptimizerConfig>
     {
         public override string ModuleName => "SmoothWizard Server Optimizer";
-        public override string ModuleVersion => "1.1.1";
+        public override string ModuleVersion => "1.2.0";
         public override string ModuleAuthor => "SkullMedia Artur Spychalski";
+
+        public OptimizerConfig Config { get; set; } = new();
+
+        public void OnConfigParsed(OptimizerConfig config) => Config = config;
 
         private bool isOptimizationEnabled = true;
 
@@ -49,12 +54,12 @@ namespace SmoothWizardOptimizer
         public override void Load(bool hotReload)
         {
             RegisterEventHandler<EventRoundStart>(OnRoundStart);
-            AddCommand("css_sw_toggle", "Toggles the SmoothWizard server optimization cleanup on/off.", OnToggleOptimizerCommand);
-            AddCommand("css_sw_on", "Turns SmoothWizard server optimization on.", OnEnableOptimizerCommand);
-            AddCommand("css_sw_off", "Turns SmoothWizard server optimization off.", OnDisableOptimizerCommand);
-            AddCommand("css_sw_status", "Prints smoothwizard_state on or off.", OnStatusOptimizerCommand);
-            AddCommand("css_sw_clear", "Starts the entity removal loop from the list. DEBUG", OnClearEntitiesLoopCommand);
-            AddCommand("css_sw_stop", "Stops the entity removal loop. DEBUG", OnStopClearLoopCommand);
+            AddCommand("css_sw_toggle", "Toggles the SmoothWizard server optimization cleanup on/off.", AdminOnly(OnToggleOptimizerCommand));
+            AddCommand("css_sw_on", "Turns SmoothWizard server optimization on.", AdminOnly(OnEnableOptimizerCommand));
+            AddCommand("css_sw_off", "Turns SmoothWizard server optimization off.", AdminOnly(OnDisableOptimizerCommand));
+            AddCommand("css_sw_status", "Prints smoothwizard_state on or off.", AdminOnly(OnStatusOptimizerCommand));
+            AddCommand("css_sw_clear", "Starts the entity removal loop from the list. DEBUG", AdminOnly(OnClearEntitiesLoopCommand));
+            AddCommand("css_sw_stop", "Stops the entity removal loop. DEBUG", AdminOnly(OnStopClearLoopCommand));
 
             Server.PrintToConsole($"[SmoothWizard Server Optimizer] Loaded successfully (v{ModuleVersion}). {StateLine()}");
         }
@@ -72,6 +77,22 @@ namespace SmoothWizardOptimizer
             }
             return HookResult.Continue;
         }
+        /// <summary>
+        /// Wraps a command so only the console / RCON (no player) and players with Config.AdminPermission
+        /// can run it. The permission is read on every use, so a config reload applies straight away.
+        /// </summary>
+        private CommandInfo.CommandCallback AdminOnly(CommandInfo.CommandCallback handler) => (player, info) =>
+        {
+            if (player is not null && !string.IsNullOrWhiteSpace(Config.AdminPermission) &&
+                !AdminManager.PlayerHasPermissions(player, Config.AdminPermission))
+            {
+                Reply(player, info, "optimizer.no_access");
+                return;
+            }
+
+            handler(player, info);
+        };
+
         private string StateLine() => isOptimizationEnabled ? "smoothwizard_state on" : "smoothwizard_state off";
 
         /// <summary>
@@ -284,7 +305,8 @@ namespace SmoothWizardOptimizer
                             if (removedTotal > 0)
                             {
                                 Console.WriteLine(Localizer["optimizer.cleared.console", context, removedTotal]);
-                                ChatAll("optimizer.cleared.chat", removedTotal);
+                                if (Config.ShowCleanupChatMessage)
+                                    ChatAll("optimizer.cleared.chat", removedTotal);
                             }
                         }
                     });

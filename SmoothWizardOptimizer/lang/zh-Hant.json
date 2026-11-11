@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] 實體刪除迴圈已結束。",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] 開始刪除 {0} 個實體。停止指令：css_sw_stop。",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] 實體刪除迴圈已停止。",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 沒有可刪除的實體。"
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 沒有可刪除的實體。",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Il ciclo di rimozione è finito.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Rimozione di {0} oggetti avviata. Ferma con css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Ciclo di rimozione fermato.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Nessun oggetto da rimuovere."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Nessun oggetto da rimuovere.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

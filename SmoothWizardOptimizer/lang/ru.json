@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Цикл удаления объектов завершён.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Начато удаление {0} объектов. Остановка: css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Цикл удаления объектов остановлен.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Нет объектов для удаления."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Нет объектов для удаления.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] У вас нет доступа к этой команде."
 }

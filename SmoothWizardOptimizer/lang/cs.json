@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Smyčka mazání skončila.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Mažu {0} objektů. Zastavíš příkazem css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Smyčka mazání zastavena.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Žádné objekty k odstranění."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Žádné objekty k odstranění.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

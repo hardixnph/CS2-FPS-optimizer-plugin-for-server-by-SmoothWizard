@@ -42,6 +42,15 @@ The plugin employs an aggressive **entity cleanup** strategy at the start of eve
 3.  Place `SmoothWizardOptimizer.dll` in that folder, and copy the `lang` folder next to it (`lang/en.json`). Chat lines live in that file. Add another `lang/<code>.json` (same keys) if you want a different language. The RCON line `smoothwizard_state on` / `smoothwizard_state off` stays in English so panels can read it.
 4.  Start (or restart) your CS2 server.
 
+## ⚙️ Config
+
+`addons/counterstrikesharp/configs/plugins/SmoothWizardOptimizer/SmoothWizardOptimizer.json` is created on first load:
+
+| Key | Default | |
+| :--- | :--- | :--- |
+| `ShowCleanupChatMessage` | `true` | `false` stops the round-start "Cleanup completed. Removed N map junk/effects." chat line. The cleanup still runs and is still logged to the server console |
+| `AdminPermission` | `@css/root` | Permission a player needs for every `css_sw_*` command. The server console and RCON always have access. `""` lets every player use them |
+
 ## 🖥️ Command to disable optimizer or enable
 
 The plugin uses the CSSHarp permission system for feature control.

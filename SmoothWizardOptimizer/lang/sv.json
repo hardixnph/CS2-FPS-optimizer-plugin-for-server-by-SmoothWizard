@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Borttagningsloopen är klar.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Tar bort {0} objekt. Stoppa med css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Borttagningsloopen stoppades.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Inga objekt att ta bort."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Inga objekt att ta bort.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

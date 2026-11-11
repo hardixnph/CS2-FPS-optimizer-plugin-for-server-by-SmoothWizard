@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Boucle de suppression terminée.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Suppression de {0} objets. Arrêt : css_sw_stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Boucle de suppression arrêtée.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Aucun objet à supprimer."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] Aucun objet à supprimer.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] Vous n'avez pas accès à cette commande."
 }

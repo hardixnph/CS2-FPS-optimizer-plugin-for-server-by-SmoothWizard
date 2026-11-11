@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] Entity removal loop finished.",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] Started removing {0} entities. Use css_sw_stop to stop.",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] Entity removal loop stopped.",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] No entities found to remove."
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] No entities found to remove.",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] 实体删除循环已结束。",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] 开始删除 {0} 个实体。停止命令：css_sw_stop。",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] 实体删除循环已停止。",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 没有可删除的实体。"
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 没有可删除的实体。",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }

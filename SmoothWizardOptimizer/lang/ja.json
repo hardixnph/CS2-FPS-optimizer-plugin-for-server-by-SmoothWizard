@@ -6,5 +6,6 @@
   "optimizer.debug.finished": "[{red}SmoothWizard{default}] 削除ループが終わりました。",
   "optimizer.debug.started": "[{red}SmoothWizard{default}] {0} 個のエンティティを削除中。止めるには css_sw_stop。",
   "optimizer.debug.stopped": "[{red}SmoothWizard{default}] 削除ループを止めました。",
-  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 消すエンティティがありません。"
+  "optimizer.debug.empty": "[{red}SmoothWizard{default}] 消すエンティティがありません。",
+  "optimizer.no_access": "[{red}SW Optimizer{default}] You don't have access to this command."
 }
